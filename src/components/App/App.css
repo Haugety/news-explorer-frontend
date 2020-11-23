@@ -3,7 +3,7 @@ input {
 }
 
 #root {
-  width: 100vw;
+  width: 100%;
   background-color: #f5f6f7;
 }
 
