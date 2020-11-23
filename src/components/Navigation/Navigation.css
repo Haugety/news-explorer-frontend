@@ -1,0 +1,121 @@
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__link {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin-right: 32px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  transition: border 0.3s ease-in-out;
+}
+
+.navigation__link_main {
+  color: #fff;
+}
+
+.navigation__link_saved-news {
+  color: #1a1b22;
+}
+
+.navigation__link_active_main {
+  border-bottom: 3px solid #fff;
+  padding-top: 3px;
+}
+
+.navigation__link_active_saved-news {
+  border-bottom: 3px solid #1a1b22;
+  padding-top: 3px;
+}
+
+.button {
+  position: relative;
+}
+
+.button__text {
+  font-size: 18px;
+  line-height: 1.33;
+}
+
+.button__icon {
+  margin-left: 7px;
+  position: relative;
+}
+
+.button__icon_main {
+  fill: #fff;
+}
+
+.button__icon_saved-news {
+  fill: #1a1b22;
+}
+
+.navigation__button {
+  height: 48px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.33;
+  outline: none;
+  cursor: pointer;
+}
+
+.navigation__button_login {
+  padding: 12px;
+}
+
+.navigation__button_logout {
+  padding: 12px 19px;
+}
+
+.navigation__button_main {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+.navigation__button_saved-news {
+  background-color: #fff;
+  border: 1px solid #1a1b22;
+  color: #1a1b22;
+}
+
+@media screen and (max-width: 900px) {
+  .navigation__link {
+    height: 66px;
+    margin-right: 16px;
+    font-weight: 500;
+    font-size: calc(16 / 768 * 100vw);
+    line-height: 1.5;
+  }
+  .navigation__button {
+    height: 40px;
+    font-size: calc(16 / 768 * 100vw);
+    line-height: 1.5;
+  }
+  .navigation__button_login {
+    padding: 12px 8px;
+  }
+  .navigation__button_logout {
+    padding: 8px 15px;
+  }
+  .button__text {
+    max-width: 100px;
+    white-space: nowrap;
+    display: inline-block;
+    font-size: calc(16 / 768 * 100vw);
+    line-height: 1.5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
