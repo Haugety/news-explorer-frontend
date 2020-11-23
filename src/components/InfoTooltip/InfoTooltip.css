@@ -1,0 +1,15 @@
+.popup__container_infotooltip {
+  padding: 43px 36px 51px;
+}
+
+.popup__title_infotooltip {
+  color: #1a1b22;
+  margin: 0;
+}
+
+.popup__link_infotooltip {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.22;
+  text-align: start;
+}
