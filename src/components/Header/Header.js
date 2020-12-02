@@ -11,6 +11,8 @@ function Header({
   onBurger,
   isBurgerOpen,
   onClose,
+  loggedIn,
+  handleSignOut,
 }) {
   const location = useLocation();
   const windowWidth = useWindowWidth();
@@ -46,12 +48,16 @@ function Header({
               <Navigation
                 path="saved-news"
                 onLogin={onLogin}
+                loggedIn={loggedIn}
+                onSignOut={handleSignOut}
               />
             </Route>
             <Route exact path="/">
               <Navigation
                 path="main"
                 onLogin={onLogin}
+                loggedIn={loggedIn}
+                onSignOut={handleSignOut}
               />
             </Route>
           </Switch>
@@ -64,6 +70,8 @@ function Header({
         isOpen={isBurgerOpen}
         onClose={onClose}
         onLogin={onLogin}
+        loggedIn={loggedIn}
+        onSignOut={handleSignOut}
       />
     </>
   );
@@ -74,6 +82,8 @@ Header.propTypes = {
   onBurger: PropTypes.func,
   isBurgerOpen: PropTypes.bool,
   onClose: PropTypes.func,
+  loggedIn: PropTypes.bool,
+  handleSignOut: PropTypes.func,
 };
 
 export default Header;

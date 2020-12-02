@@ -7,10 +7,11 @@ function PopupWithForm({
   children,
   isOpen,
   onClose,
+  onSubmit,
 }) {
   return (
     <section className={`popup ${isOpen ? 'popup_opened' : ''}`}>
-      <form className="popup__container">
+      <form className="popup__container" onSubmit={onSubmit}>
         <button type="button" className="popup__close-button" onClick={onClose}>
           <svg className="popup__close-button-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M22.3566 20L29.9996 27.643C30.6505 28.2938 30.6505 29.3491 29.9996 30C29.3487 30.6509 28.2935 30.6509 27.6426 30L18.3497 20.7071C17.9592 20.3166 17.9592 19.6834 18.3497 19.2929L27.6426 10C28.2935 9.34912 29.3487 9.34912 29.9996 10C30.6505 10.6509 30.6505 11.7061 29.9996 12.357L22.3566 20Z" fill="white" />
@@ -29,6 +30,7 @@ PopupWithForm.propTypes = {
   children: PropTypes.element,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
+  onSubmit: PropTypes.func,
 };
 
 export default PopupWithForm;
