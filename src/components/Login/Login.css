@@ -60,12 +60,7 @@
   font-size: 12px;
   line-height: 1.25;
   color: #ff0000;
-  opacity: 0;
   transition: opacity 0.3s ease-in-out;
-}
-
-.popup__error_active {
-  opacity: 1;
 }
 
 .popup__error_input {
